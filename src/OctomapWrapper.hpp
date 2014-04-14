@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include <stdint.h>
-#include <base/pose.h>
+//#include <base/pose.h>
 
 /** Adaptation of the original file from octomap_msgs from ROS*/
 
