@@ -22,6 +22,10 @@ int main(int argc, char** argv) {
 			new octomap_wrapper::OctomapWrapper();
 	octomap_wrapper::OctomapWrapper* wrapper_base2 =
 			new octomap_wrapper::OctomapWrapper();
+
+	octomap::OcTree tree_file = octomap::OcTree("/home/alcantara/Documents/Rock/tutorials/orogen/octomap_wrapper_producer/tasks/fr_079.bt");
+
+
 	// insert some measurements of occupied cells
 
 /*	for (int x = -20; x < 20; x++) {
@@ -45,6 +49,7 @@ int main(int argc, char** argv) {
 			}
 		}
 	}*/
+/*
 
 	octomap::point3d origin(0.01f, 0.01f, 0.02f);
 	octomap::point3d point_on_surface(2.01f, 0.01f, 0.01f);
@@ -78,9 +83,10 @@ int main(int argc, char** argv) {
 			}
 			single_endpoint.rotate_IP(0, 0, DEG2RAD(360.0 / num_beams));
 		}
+*/
 
 
-	cout << "done." << endl;
+	/*cout << "done." << endl;
 
 	cout << endl;
 	cout << "control queries:" << endl;
@@ -98,13 +104,17 @@ int main(int argc, char** argv) {
 	print_query_info(query, result);
 
 	cout << endl;
-	control_tree_bt.writeBinary("control_tree.bt");
+		control_tree_bt.writeBinary("control_tree.bt");
+
+	*/
 	cout << "wrote control file control_tree.bt" << endl << endl;
 	cout << "now you can use octovis to visualize: octovis simple_tree.bt"
 			<< endl;
 	cout << "Hint: hit 'F'-key in viewer to see the freespace" << endl << endl;
 
-	octomap_wrapper::binaryMapToMsg < OcTree > (control_tree_bt, *wrapper_base);
+	tree_file.writeBinary("tree_file.bt");
+
+	octomap_wrapper::binaryMapToMsg < OcTree > (tree_file, *wrapper_base);
 
 	if (wrapper_base->binary)
 		cout << "binary!!!" << endl;
