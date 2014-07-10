@@ -1,12 +1,10 @@
-
 #ifndef OCTOMAP_WRAPPER_HEADER_FILE_H
 #define OCTOMAP_WRAPPER_HEADER_FILE_H
 
 #include <string>
 #include <vector>
-#include <base/time.h>
+#include "base/time.h"
 #include <stdint.h>
-//#include <base/pose.h>
 
 /** Adaptation of the original file from octomap_msgs from ROS*/
 
@@ -21,22 +19,22 @@ public:
 
  ~OctomapWrapper(){};
 
- //Origin (in m) of the map
+ 	//Origin (in m) of the map
 
 
- //timestamp of the sonar beam
- 	base::samples::Time time;
+ 	//timestamp of the sonar beam
+ 	//base::Time time;
 
-// Flag to denote a binary (only free/occupied) or full occupancy octree (.bt/.ot file)
+	// Flag to denote a binary (only free/occupied) or full occupancy octree (.bt/.ot file)
 	bool binary;
 
-// Class id of the contained octree
+	// Class id of the contained octree
 	std::string id;
 
-//Resolution (in m) of the smallest octree nodes
+	//Resolution (in m) of the smallest octree nodes
 	double resolution;
 
-//binary serialization of octree, use conversions.h to read and write octrees
+	//binary serialization of octree, use conversions.h to read and write octrees
 	std::vector<int8_t> data;
 };
 

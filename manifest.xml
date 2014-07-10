@@ -1,8 +1,8 @@
 <package>
-  <description brief="a">
-  a
+  <description brief="Encapsulates an Octomap in order to use it as a Ruby type">
+  Encapsulates an Octomap in order to use it as a Ruby type
   </description>
-  <author>a/a@a.com</author>
+  <author>Gabriel Silva/alcantara@poli.ufrj.br</author>
   <license></license>
   <url>http://</url>
   <logo>http://</logo>
