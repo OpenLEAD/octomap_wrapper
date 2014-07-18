@@ -1,9 +1,9 @@
 #ifndef OCTOMAP_WRAPPER_HEADER_FILE_H
 #define OCTOMAP_WRAPPER_HEADER_FILE_H
 
+#include <base/Time.hpp>
 #include <string>
 #include <vector>
-#include "base/time.h"
 #include <boost/cstdint.hpp>
 
 /** Adaptation of the original file from octomap_msgs from ROS*/
